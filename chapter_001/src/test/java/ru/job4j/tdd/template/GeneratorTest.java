@@ -1,4 +1,4 @@
-package ru.job4j.template;
+package ru.job4j.tdd.template;
 
 import org.junit.Test;
 import java.util.Map;
