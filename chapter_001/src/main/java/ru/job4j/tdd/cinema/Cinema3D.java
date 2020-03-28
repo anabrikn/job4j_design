@@ -6,6 +6,7 @@ import java.util.function.Predicate;
 
 public class Cinema3D implements Cinema {
     int sessionCount = 0;
+    boolean[][] tickets = {{true, false, false, false}, {false, false, false, false}};
 
     public Cinema3D() {
         super();
@@ -18,7 +19,12 @@ public class Cinema3D implements Cinema {
 
     @Override
     public Ticket buy(Account account, int row, int column, Calendar date) {
-        return null;
+        Ticket3D result = null;
+        if (tickets[row][column]) {
+            result = new Ticket3D();
+        }
+        return result;
+
     }
 
     @Override
